@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">Sign Up Here</div>
+      <form action="signup.php" method="post">
+        <div class="area">
+          <input type="text" id="fname" class="fname" name="fname" required />
+          <label>Full Name</label>
+        </div>
+        <div class="area">
+          <input type="email" id="email" class="email" name="email" required />
+          <label>Email</label>
+        </div>
+        <div class="area">
+          <input
+            type="tel"
+            id="phone"
+            class="phone"
+            name="phone"
+            required
+            maxlength="10"
+            minlength="10"
+          />
+          <label>Phone No</label>
+        </div>
+        <div class="area">
+          <input
+            type="password"
+            id="pass"
+            class="pass"
+            name="pass"
+            minlength="6"
+            required
+          />
+          <!-- <i class="fa fa-eye" onclick="myFunction()"></i> -->
+          <label>Password</label>
+        </div>
+        <div class="area">
+          <input
+            type="password"
+            id="cpass"
+            class="cpass"
+            name="cpass"
+            minlength="6"
+            required
+          />
+          <label>Confirm password</label>
+        </div>
+        <br />
+        <div class="checkbox">
+          <input type="checkbox" id="remember-me" name="checkbox" required />
+          <label for="checkbox"
+            >I agree to the <a href=""> Terms of Conditions.</a></label
+          >
+        </div>
+        <div class="area">
+          <input type="submit" value="Sign up" />
+        </div>
+        <div class="signup">
+          Have an account? <a href="login.html">Login here</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("pass");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+  <script>
+    var check = function () {
+      if (
+        document.getElementById("pass").value ==
+        document.getElementById("cpass").value
+      ) {
+        document.getElementById("message").style.color = "green";
+        document.getElementById("message").innerHTML = "matching";
+      } else {
+        document.getElementById("message").style.color = "red";
+        document.getElementById("message").innerHTML = "not matching";
+      }
+    };
+  </script>
+</html>
