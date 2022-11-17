@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .callout {
+        position: fixed;
+        top: 10px;
+        left: 700px;
+        margin-left: 20px;
+        max-width: 380px;
+      }
+
+      .callout-header {
+        padding: 25px 15px;
+        background: #555;
+        font-size: 30px;
+        color: white;
+      }
+
+      .callout-container {
+        padding: 15px;
+        background-color: #ccc;
+        color: black;
+      }
+
+      .closebtn {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .closebtn:hover {
+        color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Callout Messages</h2>
+
+    <p>Some content text, blabla.</p>
+    <p>Some content text, blabla.</p>
+    <p>Click on the "x" symbol to close the callout message.</p>
+    <div class="callout">
+      <div class="callout-header">Login Here</div>
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >x</span
+      >
+      <div class="callout-container">
+        <p>
+          <div class="wrapper">
+            <form action="login.php" method="post">
+              <div class="area">
+                <input type="email" placeholder="example@gmail.com" required />
+                <!-- <label>Email</label> -->
+              </div>
+              <div class="area">
+                <input type="password" id="pass" minlength="6" placeholder="Password" required />
+                <!-- <label>Password</label> -->
+              </div>
+              <div class="content">
+                <div class="pass">
+                  <a href="forgotPassword.html">Forgot password?</a>
+                </div>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="remember-me" />
+                <label for="remember-me">Remember me</label>
+              </div>
+              <div class="area">
+                <input type="submit" value="Login" />
+              </div>
+              <div class="signup">
+                Don't have an account? <a href="signup.html">Signup now</a>
+              </div>
+            </form>
+          </div>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
