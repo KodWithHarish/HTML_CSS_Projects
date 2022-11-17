@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="l.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="" name="form">
+        <div class="area">
+          <input
+            name="text"
+            class="text"
+            id="result"
+            readonly
+            placeholder="Calculator"
+            style="overflow: scroll"
+          />
+        </div>
+        <div class="grey">
+          <br />
+          <div class="area">
+            &nbsp;&nbsp;
+            <input
+              type="button"
+              value="AC"
+              id="clear"
+              onclick="clearScreen()"
+            />
+            &nbsp;
+            <input type="button" value="⌫" id="back" onclick="back()" /> &nbsp;
+            <input type="button" value="%" id="mod" onclick="liveScreen('%')" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input
+              type="button"
+              value="÷"
+              class="round"
+              id="div"
+              onclick="liveScreen('/')"
+            />
+          </div>
+          <div class="area">
+            &nbsp;&nbsp;
+            <input type="button" value="7" id="seven" onclick="liveScreen(7)" />
+            &nbsp;
+            <input type="button" value="8" id="eight" onclick="liveScreen(8)" />
+            &nbsp;
+            <input type="button" value="9" id="nine" onclick="liveScreen(9)" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input
+              type="button"
+              value="×"
+              class="round"
+              id="mul"
+              onclick="liveScreen('*')"
+            />
+          </div>
+          <div class="area">
+            &nbsp;&nbsp;
+            <input type="button" value="4" id="four" onclick="liveScreen(4)" />
+            &nbsp;
+            <input type="button" value="5" id="five" onclick="liveScreen(5)" />
+            &nbsp;
+            <input type="button" value="6" id="six" onclick="liveScreen(6)" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input
+              type="button"
+              value="-"
+              class="round"
+              id="sub"
+              onclick="liveScreen('-')"
+            />
+          </div>
+          <div class="area">
+            &nbsp;&nbsp;
+            <input type="button" value="1" id="one" onclick="liveScreen(1)" />
+            &nbsp;
+            <input type="button" value="2" id="two" onclick="liveScreen(2)" />
+            &nbsp;
+            <input type="button" value="3" id="three" onclick="liveScreen(3)" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input
+              type="button"
+              value="+"
+              class="round"
+              id="add"
+              onclick="liveScreen('+')"
+            />
+          </div>
+          <div class="area">
+            &nbsp;&nbsp;
+            <input type="button" value="()" /> &nbsp;
+            <input type="button" value="0" id="zero" onclick="liveScreen(0)" />
+            &nbsp;
+            <input type="button" value="." id="dot" onclick="liveScreen('.')" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input
+              type="button"
+              value="="
+              class="blue"
+              id="equal"
+              onclick="result.value=eval(result.value)"
+            />
+          </div>
+          <br />
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    function liveScreen(value) {
+      document.getElementById("result").value += value;
+    }
+    function clearScreen() {
+      document.getElementById("result").value = "";
+    }
+    function back() {
+      var exp = document.form.result.value;
+      document.form.result.value = exp.substring(0, exp.length - 1);
+    }
+  </script>
+</html>
