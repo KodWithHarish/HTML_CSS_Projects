@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi.css" />
+    <script src="bmi.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>BMI Calculator</h1>
+        <br />
+      </div>
+      <!-- age -->
+      <div class="input">
+        <label for="number">Age</label> <br />
+        <input
+          type="number"
+          id="number"
+          name="number"
+          value=""
+          min="2"
+          max="120"
+        />
+      </div>
+      <!-- height -->
+      <div class="input">
+        <label for="height">Height(cm)</label> <br />
+        <input type="number" id="height" name="height" value="" min="0" />
+      </div>
+      <!-- weight -->
+      <div class="input">
+        <label for="weight">Weight(kg)</label> <br />
+        <input type="number" id="weight" name="weight" value="" min="1" />
+      </div>
+      <!-- btn -->
+      <div class="btn">
+        <button
+          type="submit"
+          id="submit"
+          value="Validate"
+          name="submit"
+          onclick="Convert()"
+        >
+          Calculate
+        </button>
+      </div>
+      <!-- bmi -->
+      <div class="input">
+        <label for="msg">BMI<span>(kg/m<sup>2</sup>)</span></label>
+        <br />
+        <div id="msg" class="msg"></div>
+      </div>
+      <!-- Status -->
+      <div class="input">
+        <label for="msg">Status</label> <br />
+        <div id="msg2" class="msg"></div>
+      </div>
+      <div id="footer">
+        <p>
+          Designed & developed By
+          <span id="mylink" title="Visit My GitHub Page"
+            ><a href="https://github.com/harish-kumbhar09">@Harish</a></span
+          >
+          2022
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header">
+        <h1>BMI table for adults</h1>
+        <br />
+      </div>
+      <table class="table">
+        <tr>
+          <th>Category</th>
+          <th>BMI range - kg/m2</th>
+        </tr>
+        <tr>
+          <td>Severe Thinness</td>
+          <td>< 16</td>
+        </tr>
+        <tr>
+          <td>Mild Thinness</td>
+          <td>16 - 18.5</td>
+        </tr>
+        <tr>
+          <td>Normal</td>
+          <td>18.5 - 25</td>
+        </tr>
+        <tr>
+          <td>Overweight</td>
+          <td>25 - 30</td>
+        </tr>
+        <tr>
+          <td>Obese Class</td>
+          <td>> 30</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
