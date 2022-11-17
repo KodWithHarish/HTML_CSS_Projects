@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encode Decode Text</title>
+    <link rel="stylesheet" href="Encode_Decode.css" />
+    <script src="Encode_Decode.js"></script>
+  </head>
+  <body>
+    <!-- for encoding -->
+    <section class="stock">
+        <div class="wrapper">
+            <header>
+                <h1>Encode</h1>
+            </header>
+            <hr>
+            <div class="form">
+            <div class="pass">
+                <input
+                type="text"
+                id="text"
+                value=""
+                placeholder="Enter Text To Encode"
+                />
+            <div class="btn">
+                <button type="submit" id="submit" value="" onclick="encode()">Encode</button>
+            </div>
+            <div class="display">
+                <span id="msg1" ></span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- for decoding -->
+    <section class="stock1">
+        <div class="wrapper">
+            <header>
+                <h1>Decode</h1>
+            </header>
+            <hr>
+            <div class="form">
+            <div class="pass">
+                <input
+                type="text"
+                id="text1"
+                value=""
+                placeholder="Enter Text To Decode"
+                />
+            <div class="btn">
+                <button type="submit" id="submit" value="" onclick="decode()">Decode</button>
+            </div>
+            <div class="display">
+                <span id="msg2" ></span>
+            </div>
+        </div>
+        </div>
+    </section>
+  </body>
+</html>
