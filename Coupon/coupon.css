@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  background: linear-gradient(135deg, rgb(198, 18, 138), rgb(51, 27, 188));
+  justify-content: center;
+}
+.coupon {
+  border: 5px dotted #bbb;
+  width: 80%;
+  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.container {
+  padding: 2px 16px;
+  background-color: #f1f1f1;
+  align-items: center;
+  text-align: center;
+}
+#red {
+  background-color: rgb(224, 88, 88);
+}
+.promo {
+  background: #ccc;
+  padding: 3px;
+}
+.expire {
+  color: red;
+}
+img {
+  margin-top: 10px;
+  width: 30%;
+}
