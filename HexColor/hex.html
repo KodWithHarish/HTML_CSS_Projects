@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Generator</title>
+    <link rel="stylesheet" href="hex.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <h1>Color Generator</h1>
+        <br />
+      </div>
+      <span id="color"></span>
+      <button onclick="window.location.reload()">Generate</button>
+      <div id="foot">
+        <p>
+          Designed & developed By
+          <span id="mylink" title="Visit My GitHub Page"
+            ><a href="https://github.com/harish-kumbhar09">@Harish</a></span
+          >
+          2022
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const setBg = () => {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      document.body.style.backgroundColor = "#" + randomColor;
+      color.innerHTML = "#" + randomColor;
+    };
+    setBg();
+  </script>
+</html>
